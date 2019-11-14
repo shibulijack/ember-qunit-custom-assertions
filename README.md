@@ -93,9 +93,9 @@ Checks if a string, array or object is empty.
 
 **params**
 
-`actual` _[string/array/object]_
+- `actual` _[string/array/object]_
 
-`message` _@optional_
+- `message` _@optional_
 
 **example**
 
