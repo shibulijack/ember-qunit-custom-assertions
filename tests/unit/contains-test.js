@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import setupCustomAssertions from 'ember-cli-custom-assertions/test-support';
+import setupCustomAssertions from 'ember-qunit-custom-assertions/test-support';
 
 module('Assertion | contains', function(hooks) {
   setupTest(hooks);

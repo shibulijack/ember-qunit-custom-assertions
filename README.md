@@ -42,10 +42,22 @@ ember install ember-qunit-custom-assertions
 Usage
 ------------------------------------------------------------------------------
 
-1. Install [ember-cli-custom-assertions](https://github.com/DockYard/ember-cli-custom-assertions).
-2. Add `setupCustomAssertions(hooks)` to your test module.
-3. Use custom assertions just like any other assert statements.
+You must inject the assertions to use them in tests.
 
+```javascript
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
+import setupCustomAssertions from 'ember-qunit-custom-assertions/test-support';
+
+module('default setup', function(hooks) {
+  setupTest(hooks);
+  setupCustomAssertions(hooks);
+
+  test('can inject custom assertions', function(assert) {
+    assert.contains('.foo', 'Foo bar');
+  });
+});
+```
 
 Assertions
 ------------------------------------------------------------------------------
