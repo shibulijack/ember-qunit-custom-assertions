@@ -1,8 +1,8 @@
-name: Build
+name: PR build
 
 on:
-  push:
-    branches: 
+  pull_request:
+    branches:
     - master
 
 jobs:
