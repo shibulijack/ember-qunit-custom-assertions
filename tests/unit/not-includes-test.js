@@ -22,4 +22,10 @@ module('Assertion | notIncludes', function(hooks) {
     };
     assert.notIncludes(sampleObj, 'test', 'Object does not contain the specified key');
   });
+
+  test('can check complex objects', function(assert) {
+    let sampleObj = {x: 1, y: 2};
+    let expectedObj = {z: 3};
+    assert.notIncludes(sampleObj, expectedObj, 'Expected object is not found in target object');
+  });
 });
