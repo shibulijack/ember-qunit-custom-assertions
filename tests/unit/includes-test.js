@@ -20,6 +20,6 @@ module('Assertion | includes', function(hooks) {
     let sampleObj = {
       "foo": "bar"
     };
-    assert.includes(sampleObj, 'foo', 'Object includes key');
+    assert.includes(sampleObj, 'foo');
   });
 });

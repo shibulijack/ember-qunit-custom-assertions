@@ -54,7 +54,7 @@ module('default setup', function(hooks) {
   setupCustomAssertions(hooks);
 
   test('can inject custom assertions', function(assert) {
-    assert.contains('.foo', 'Foo bar');
+    assert.includes('foo bar', 'bar');
   });
 });
 ```
@@ -62,7 +62,7 @@ module('default setup', function(hooks) {
 Assertions
 ------------------------------------------------------------------------------
 
-### assert.contains
+### assert.includes
 Works on strings, arrays and objects. 
 
 **params**
@@ -76,12 +76,12 @@ Works on strings, arrays and objects.
 **example**
 
 ```javascript
-assert.contains([1,2,3], 2, 'Array contains the specified element');
-assert.contains('foo bar', 'bar', 'String contains sub string');
-assert.contains({ foo: "bar" }, 'foo', 'Object contains key');
+assert.includes([1,2,3], 2, 'Array contains the specified element');
+assert.includes('foo bar', 'bar', 'String contains sub string');
+assert.includes({ foo: "bar" }, 'foo', 'Object contains key');
 ```
 
-### assert.notContains
+### assert.notIncludes
 Works on strings, arrays and objects. 
 
 **params**
@@ -95,9 +95,9 @@ Works on strings, arrays and objects.
 **example**
 
 ```javascript
-assert.notContains([1,2,3], 2, 'Array does not contain the specified element');
-assert.notContains('foo bar', 'dog', 'String does not contain sub string');
-assert.notContains({ foo: "bar" }, 'cat', 'Object does not contain the specified key');
+assert.notIncludes([1,2,3], 2, 'Array does not contain the specified element');
+assert.notIncludes('foo bar', 'dog', 'String does not contain sub string');
+assert.notIncludes({ foo: "bar" }, 'cat', 'Object does not contain the specified key');
 ```
 
 ### assert.empty
@@ -112,9 +112,9 @@ Checks if a string, array or object is empty.
 **example**
 
 ```javascript
-- assert.empty([], 'Empty array');
-- assert.empty({}, 'Empty array');
-- assert.empty('', 'Empty array');
+assert.empty([], 'Empty array');
+assert.empty({}, 'Empty array');
+assert.empty('', 'Empty array');
 ```
 
 ### assert.notEmpty
