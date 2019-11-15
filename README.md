@@ -76,9 +76,10 @@ Works on strings, arrays and objects.
 **example**
 
 ```javascript
-assert.includes([1,2,3], 2, 'Array contains the specified element');
+assert.includes([1, 2, 3], 2, 'Array contains the specified element');
 assert.includes('foo bar', 'bar', 'String contains sub string');
 assert.includes({ foo: "bar" }, 'foo', 'Object contains key');
+assert.includes({ a: 1, b: 2, c: 3 }, { a: 1 }, 'Specified object is present in target object');
 ```
 
 ### assert.notIncludes
@@ -95,9 +96,10 @@ Works on strings, arrays and objects.
 **example**
 
 ```javascript
-assert.notIncludes([1,2,3], 2, 'Array does not contain the specified element');
+assert.notIncludes([1, 2, 3], 2, 'Array does not contain the specified element');
 assert.notIncludes('foo bar', 'dog', 'String does not contain sub string');
 assert.notIncludes({ foo: "bar" }, 'cat', 'Object does not contain the specified key');
+assert.includes({ a: 1, b: 2, c: 3 }, { z: 4 }, 'Specified object is not present in target object');
 ```
 
 ### assert.empty
