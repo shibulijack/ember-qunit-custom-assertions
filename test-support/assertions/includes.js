@@ -9,16 +9,13 @@ export default function(context, value, expected, message) {
   ) {
     result = value.includes(expected);
   } else if (typeof value === "object") {
-    if(typeof expected === "string") {
+    // Expected arg can be either `string` or `object`
+    if (typeof expected === "string") {
       result = value.hasOwnProperty(expected);
     } else {
-      let isAllKeysIncluded = true;
-      Object.keys(expected).forEach((key) => {
-        if(!value.hasOwnProperty(key) || value[key] != expected[key]) {
-          isAllKeysIncluded = false;
-        }
-      });
-      result = isAllKeysIncluded;
+      result = Object.keys(expected).every(
+        key => value.hasOwnProperty(key) && value[key] === expected[key]
+      );
     }
   }
 
