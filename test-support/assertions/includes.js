@@ -1,20 +1,29 @@
-export default function(context, value, expected, message) {
-  message = message || `${value} should contain "${expected}"`;
-  let actual = value;
+export default function(context, target, expected, message) {
+  message = message || `${target} should contain "${expected}"`;
+  let actual = target;
   let result = false;
 
   if (
-    typeof value === "string" ||
-    (typeof value === "object" && Array.isArray(value))
+    typeof target === "string" ||
+    (typeof target === "object" && Array.isArray(target))
   ) {
-    result = value.includes(expected);
-  } else if (typeof value === "object") {
+    // Expected arg can be either `string`, `number` or `object`
+    if (typeof expected === "string" || typeof expected === "number") {
+      result = target.includes(expected);
+    } else {
+      result = target.some(obj =>
+        Object.keys(obj).every(
+          k => expected.hasOwnProperty(k) && expected[k] === obj[k]
+        )
+      );
+    }
+  } else if (typeof target === "object") {
     // Expected arg can be either `string` or `object`
     if (typeof expected === "string") {
-      result = value.hasOwnProperty(expected);
+      result = target.hasOwnProperty(expected);
     } else {
       result = Object.keys(expected).every(
-        key => value.hasOwnProperty(key) && value[key] === expected[key]
+        key => target.hasOwnProperty(key) && target[key] === expected[key]
       );
     }
   }

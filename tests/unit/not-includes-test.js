@@ -11,6 +11,11 @@ module('Assertion | notIncludes', function(hooks) {
     assert.notIncludes(sampleArr, 4, 'Array does not contain element');
   });
 
+  test('can check complex arrays', function(assert) {
+    let sampleArr = [{x: 1}, {y: 2}, {z: 3}];
+    assert.notIncludes(sampleArr, {a: 15}, 'Array includes object');
+  });
+
   test('can check string', function(assert) {
     let sampleStr = "Developed by Freshworks";
     assert.notIncludes(sampleStr, 'Shibu', 'String does not have any matches');

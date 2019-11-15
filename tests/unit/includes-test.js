@@ -11,10 +11,10 @@ module('Assertion | includes', function(hooks) {
     assert.includes(sampleArr, 2, 'Array includes element');
   });
 
-  // test('can check complex arrays', function(assert) {
-  //   let sampleArr = [{x: 1}, {y: 2}, {z: 3}];
-  //   assert.includes(sampleArr, {x: 1}, 'Array includes element');
-  // });
+  test('can check complex arrays', function(assert) {
+    let sampleArr = [{x: 1}, {y: 2}, {z: 3}];
+    assert.includes(sampleArr, {x: 1}, 'Array includes object');
+  });
 
   test('can check string', function(assert) {
     let sampleStr = "Developed by Freshworks";
