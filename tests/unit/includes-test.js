@@ -22,4 +22,14 @@ module('Assertion | includes', function(hooks) {
     };
     assert.includes(sampleObj, 'foo');
   });
+
+  test('can check complex objects', function(assert) {
+    let sampleObj = {
+      "foo": "bar"
+    };
+    let expectedObj = {
+      "foo": "bar"
+    }
+    assert.includes(sampleObj, expectedObj);
+  });
 });
