@@ -133,10 +133,80 @@ Checks if a string, array or object is not empty.
 **example**
 
 ```javascript
-assert.notEmpty([]);  // passes
-assert.notEmpty([1, 2]);  // fails
+assert.notEmpty([]);  // fails
+assert.notEmpty([1, 2]);  // passes
 assert.notEmpty({ foo: "bar" }, 'Not an empty object');
 assert.notEmpty('foo', 'Not an empty string');
+```
+
+### assert.lt
+Checks if a number is lesser than expected. 
+
+**params**
+
+- `actual` _[number]_
+
+- `expected` _[number]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.lt(1, 4);
+```
+
+### assert.lte
+Checks if a number is lesser than or equal to expected. 
+
+**params**
+
+- `actual` _[number]_
+
+- `expected` _[number]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.lte(1, 4);
+assert.lte(1, 1); // both pass
+```
+
+### assert.gt
+Checks if a number is greater than expected. 
+
+**params**
+
+- `actual` _[number]_
+
+- `expected` _[number]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.gt(15, 5);
+```
+
+### assert.gte
+Checks if a number is greater than or equal to expected. 
+
+**params**
+
+- `actual` _[number]_
+
+- `expected` _[number]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.gte(15, 5);
+assert.gte(15, 15);
 ```
 
 Contributing
