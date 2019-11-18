@@ -209,6 +209,24 @@ assert.gte(15, 5);
 assert.gte(15, 15);
 ```
 
+### assert.instanceOf
+Checks if the target is an instance of the expected type. 
+
+**params**
+
+- `expected` _[Array/Object/Date]_
+
+- `target` _[Array/Object/Date]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.instanceOf(Array, []);
+assert.instanceOf(Object, {});
+```
+
 Contributing
 ------------------------------------------------------------------------------
 
