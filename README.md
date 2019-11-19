@@ -104,6 +104,44 @@ assert.notIncludes({ foo: "bar" }, 'cat', 'Object does not contain the specified
 assert.includes({ a: 1, b: 2, c: 3 }, { z: 4 }, 'Specified object is not present in target object');
 ```
 
+### assert.deepIncludes
+Checks if target has the expected elements/keys. Works on strings, arrays and objects. 
+
+**params**
+
+- `actual` _[string/array/object]_
+
+- `expected` _[array of string/number]_
+
+- `message` _@optional_
+
+**examples**
+
+```javascript
+assert.deepIncludes([1,2,3], [1,2], 'Array includes elements');
+assert.deepIncludes("Developed by Freshworks", ["Fresh","by"], 'String includes words');
+assert.deepIncludes({x:1, y:2}, ['x', 'y'], 'Object has keys');
+```
+
+### assert.notDeepIncludes
+Works on strings, arrays and objects. 
+
+**params**
+
+- `actual` _[string/array/object]_
+
+- `expected` _[array of string/number]_
+
+- `message` _@optional_
+
+**examples**
+
+```javascript
+assert.notDeepIncludes([1,2,3], [4,5]);
+assert.notDeepIncludes("Developed by Freshworks", ["Shibu","Lijack"]);
+assert.notDeepIncludes({x:1, y:2}, ['a', 'b']);
+```
+
 ### assert.empty
 Checks if a string, array or object is empty. 
 
