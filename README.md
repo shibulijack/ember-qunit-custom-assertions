@@ -1,7 +1,7 @@
 ember-qunit-custom-assertions
 ==============================================================================
 
-[QUnit](https://api.qunitjs.com/assert/) has a very basic collection of assertions, especially when compared to something like [chai](https://www.chaijs.com/api/bdd/). 
+[QUnit](https://api.qunitjs.com/assert/) has a very basic collection of assertions, especially when compared to something like [chai](https://www.chaijs.com/api/bdd/).
 
 Let's take an example. If you want to check if a string/array/object is empty, you would do something like this in chai:
 
@@ -63,7 +63,7 @@ Assertions
 ------------------------------------------------------------------------------
 
 ### assert.includes
-Works on strings, arrays and objects. 
+Works on strings, arrays and objects.
 
 **params**
 
@@ -84,7 +84,7 @@ assert.includes({ a: 1, b: 2, c: 3 }, { a: 1 }, 'Specified object is present in 
 ```
 
 ### assert.notIncludes
-Works on strings, arrays and objects. 
+Works on strings, arrays and objects.
 
 **params**
 
@@ -105,7 +105,7 @@ assert.includes({ a: 1, b: 2, c: 3 }, { z: 4 }, 'Specified object is not present
 ```
 
 ### assert.deepIncludes
-Checks if target has the expected elements/keys. Works on strings, arrays and objects. 
+Checks if target has the expected elements/keys. Works on strings, arrays and objects.
 
 **params**
 
@@ -124,7 +124,7 @@ assert.deepIncludes({x:1, y:2}, ['x', 'y'], 'Object has keys');
 ```
 
 ### assert.notDeepIncludes
-Works on strings, arrays and objects. 
+Works on strings, arrays and objects.
 
 **params**
 
@@ -143,7 +143,7 @@ assert.notDeepIncludes({x:1, y:2}, ['a', 'b']);
 ```
 
 ### assert.empty
-Checks if a string, array or object is empty. 
+Checks if a string, array or object is empty.
 
 **params**
 
@@ -160,7 +160,7 @@ assert.empty('', 'Empty array');
 ```
 
 ### assert.notEmpty
-Checks if a string, array or object is not empty. 
+Checks if a string, array or object is not empty.
 
 **params**
 
@@ -177,8 +177,26 @@ assert.notEmpty({ foo: "bar" }, 'Not an empty object');
 assert.notEmpty('foo', 'Not an empty string');
 ```
 
+### assert.length
+Checks if the target’s length is equal to the given number.
+
+**params**
+
+- `actual` _[string/array]
+
+- `expected` _[number]_
+
+- `message` _@optional_
+
+**example**
+
+```javascript
+assert.length('foo', 3);
+assert.length(['foo', 'bar'], 2);
+```
+
 ### assert.lt
-Checks if a number is lesser than expected. 
+Checks if a number is lesser than expected.
 
 **params**
 
@@ -195,7 +213,7 @@ assert.lt(1, 4);
 ```
 
 ### assert.lte
-Checks if a number is lesser than or equal to expected. 
+Checks if a number is lesser than or equal to expected.
 
 **params**
 
@@ -213,7 +231,7 @@ assert.lte(1, 1); // both pass
 ```
 
 ### assert.gt
-Checks if a number is greater than expected. 
+Checks if a number is greater than expected.
 
 **params**
 
@@ -230,7 +248,7 @@ assert.gt(15, 5);
 ```
 
 ### assert.gte
-Checks if a number is greater than or equal to expected. 
+Checks if a number is greater than or equal to expected.
 
 **params**
 
@@ -248,7 +266,7 @@ assert.gte(15, 15);
 ```
 
 ### assert.instanceOf
-Checks if the target is an instance of the expected type. 
+Checks if the target is an instance of the expected type.
 
 **params**
 
