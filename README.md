@@ -2,6 +2,7 @@ ember-qunit-custom-assertions
 ==============================================================================
 ![npm](https://img.shields.io/npm/v/ember-qunit-custom-assertions)
 ![npm](https://img.shields.io/npm/dw/ember-qunit-custom-assertions)
+![github](https://github.com/shibulijack-fd/ember-qunit-custom-assertions/workflows/deploy/badge.svg)
 
 [QUnit](https://api.qunitjs.com/assert/) has a very basic collection of assertions, especially when compared to something like [chai](https://www.chaijs.com/api/bdd/).
 
