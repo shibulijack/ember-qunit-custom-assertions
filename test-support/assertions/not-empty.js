@@ -1,4 +1,4 @@
-export default function(context, value, message) {
+export default function(value, message) {
   message = message || `${value} should not be empty"`;
   let actual = value;
   let result = false;
