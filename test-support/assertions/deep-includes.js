@@ -1,4 +1,4 @@
-export default function(context, target, expected, message) {
+export default function(target, expected, message) {
   message = message || `${JSON.stringify(target, null, 2)} should contain "${expected}"`;
   let actual = target;
   let result = false;

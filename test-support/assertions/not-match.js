@@ -1,4 +1,4 @@
-export default function (context, value, expected, message) {
+export default function (value, expected, message) {
   message = message || `${value} should be a string and ${expected} should be a regular expression"`;
   let actual = value;
   let result = false;

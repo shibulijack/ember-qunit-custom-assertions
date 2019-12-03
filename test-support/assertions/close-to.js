@@ -1,4 +1,4 @@
-export default function (context, actual, expected, delta, message) {
+export default function (actual, expected, delta, message) {
   message = message || `${actual} should be have a delta of ${delta}"`;
   let result = false;
   if (

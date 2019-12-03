@@ -1,10 +1,8 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import setupCustomAssertions from 'ember-qunit-custom-assertions/test-support';
 
 module('Assertion | match', function(hooks) {
   setupTest(hooks);
-  setupCustomAssertions(hooks);
 
   test('regex should not match string', function(assert) {
     let regexMatcher = /text/;

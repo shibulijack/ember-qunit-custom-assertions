@@ -1,10 +1,8 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import setupCustomAssertions from 'ember-qunit-custom-assertions/test-support';
 
 module('Assertion | compare', function(hooks) {
   setupTest(hooks);
-  setupCustomAssertions(hooks);
 
   module('lt', function() {
     test('can check numbers', function(assert) {

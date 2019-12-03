@@ -1,4 +1,4 @@
-export default function(context, expected, target, message) {
+export default function(expected, target, message) {
   message = message || `${target} should be instance of ${expected}"`;
   let result = target instanceof expected;
 
