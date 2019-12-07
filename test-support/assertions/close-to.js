@@ -1,5 +1,5 @@
 export default function (actual, expected, delta, message) {
-  message = message || `${actual} should to be close to ${expected} +/- ${delta}"`;
+  message = message || `${actual} should be close to ${expected} +/- ${delta}"`;
   let result = false;
   if (
     actual && typeof actual === 'number' &&
