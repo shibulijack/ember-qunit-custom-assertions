@@ -1,12 +1,12 @@
 export default function (actual, expected, delta, message) {
-  message = message || `${actual} should be have a delta of ${delta}"`;
+  message = message || `${actual} should to be close to ${expected} +/- ${delta}"`;
   let result = false;
   if (
     actual && typeof actual === 'number' &&
     expected && typeof expected === 'number' &&
     delta && typeof delta === 'number'
   ) {
-    result = expected === Math.abs(actual - delta);
+    result = Math.abs(actual - expected) <= delta
   } else {
     message = `${actual}, ${expected} and ${delta} should be numbers`
   }
